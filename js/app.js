@@ -7,6 +7,13 @@ let mood = {};
 
 // load function
 window.onload = function () {
+  // resize the window
+  console.log(window.innerWidth);
+  console.log(window.innerHeight);
+  window.resizeTo(200, 200)
+  // window.resizeTo(window.innerWidth, window.innerHeight)
+  // join buttons
+  joinButton();
   //mood of site
   if (!localStorage.getItem("siteMood")) {
     localStorage.siteMood = JSON.stringify({ one: "#e6e6e6", two: "#000" });
@@ -72,14 +79,6 @@ document
       .classList.toggle("active");
   });
 
-console.log(searchBar.children);
-window.addEventListener("click", (ele) => {
-  console.log(ele.target);
-  if (ele.target != searchBar.firstChild) {
-    console.log("0");
-  }
-});
-
 // queue of iamge
 let count = 0;
 let cards = Array.from(
@@ -143,3 +142,16 @@ observer.observe(document.querySelector(".skills .container"));
 // Copy rights
 let copyRight = document.querySelector("footer .copy-right");
 copyRight.innerHTML = `&copy; ${new Date().getFullYear()}, Abdulrahim Alnjjar`;
+
+// hide join buttons
+let joinButtons = document.querySelector(".web-header .join-buttons");
+window.onresize = joinButton;
+function joinButton() {
+  if (window.innerWidth <= 992) {
+    document
+      .querySelector(".all-site-content .side-bar .setting")
+      .before(joinButtons);
+  } else {
+    document.querySelector(".web-header .container").appendChild(joinButtons);
+  }
+}
