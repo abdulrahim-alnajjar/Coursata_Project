@@ -46,7 +46,7 @@ setInterval(() => {
   document.querySelector(
     ".images img"
   ).src = `./images/intro cards (${rand}).jpg`;
-}, 1000);
+}, 10000);
 
 // searching
 document
