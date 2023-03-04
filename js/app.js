@@ -41,12 +41,12 @@ setInterval(() => {
   let rand = Math.floor(Math.random() * 5 + 1);
   document.querySelector(
     ".landing"
-  ).style.backgroundImage = `url("../images/0 (${rand}).jpg")`;
+  ).style.backgroundImage = `url("./images/0 (${rand}).jpg")`;
   rand = Math.floor(Math.random() * 3 + 1);
   document.querySelector(
     ".images img"
-  ).src = `../images/intro cards (${rand}).jpg`;
-}, 10000);
+  ).src = `./images/intro cards (${rand}).jpg`;
+}, 1000);
 
 // searching
 document
