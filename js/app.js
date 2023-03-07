@@ -8,10 +8,7 @@ let mood = {};
 // load function
 window.onload = function () {
   // resize the window
-  console.log(window.innerWidth);
-  console.log(window.innerHeight);
-  window.resizeTo(200, 200)
-  // window.resizeTo(window.innerWidth, window.innerHeight)
+
   // join buttons
   joinButton();
   //mood of site
