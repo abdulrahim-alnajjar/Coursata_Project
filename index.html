@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coursata</title>
+    <meta property="og:title" content="Coursata" />
+    <meta property="og:type" content="Learning website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -33,17 +37,18 @@
 
     <!-- start search bar -->
     <div class="search-bar">
-      <form action="" class="search-form">
-        <i class="fa-solid fa-magnifying-glass submit"></i>
-        <input
-          type="search"
-          name="search"
-          id="nav-search"
-          class="search-input"
-          placeholder="Search"
-        />
-        <i class="fa-solid fa-xmark close-search-bar"></i>
-      </form>
+      <div class="container">
+        <form action="" class="search-form">
+          <i class="fa-solid fa-magnifying-glass submit"></i>
+          <input
+            type="search"
+            name="search"
+            id="nav-search"
+            class="search-input"
+            placeholder="Search"
+          />
+        </form>
+      </div>
     </div>
     <!-- end search bar -->
 
@@ -84,8 +89,9 @@
             </div>
             <div class="intro-box">
               <div class="images">
-                <div class="image-box" data-info="New Course">
-                  <img src="./images/intro cards (1).jpg" alt="image product"  />
+                <div class="image-box">
+                  <img src="./images/intro cards (1).jpg" alt="image product" />
+                  <h3 data-info="course Name">New Course</h3>
                 </div>
               </div>
             </div>
@@ -364,6 +370,7 @@
               </p>
             </div>
             <div class="time-grid">
+              <div class="before-shape"></div>
               <div class="stage" data-year="2020">
                 <h3>start company</h3>
                 <p>
@@ -524,8 +531,16 @@
                     type="text"
                     placeholder="Full Name"
                   />
-                  <input class="text-input email" type="email" placeholder="Email" />
-                  <input class="text-input subject" type="text" placeholder="Subject" />
+                  <input
+                    class="text-input email"
+                    type="email"
+                    placeholder="Email"
+                  />
+                  <input
+                    class="text-input subject"
+                    type="text"
+                    placeholder="Subject"
+                  />
                   <input
                     class="text-input phone"
                     type="text"
@@ -567,8 +582,17 @@
               <ul class="social">
                 <li>
                   <a
+                    href="https://github.com/abdulrahim-alnajjar"
+                    target="_blank"
+                    title="Github"
+                    ><i class="fa-brands fa-github"></i>Github</a
+                  >
+                </li>
+                <li>
+                  <a
                     href="https://www.linkedin.com/in/abdulrahim-mohamed/"
                     target="_blank"
+                    title="Linkedin"
                     ><i class="fa-brands fa-linkedin"></i>Linked In</a
                   >
                 </li>
@@ -576,6 +600,7 @@
                   <a
                     href="https://instagram.com/abdulrahim_alnajjar?igshid=YmMyMTA2M2Y="
                     target="_blank"
+                    title="Instagram"
                     ><i class="fa-brands fa-instagram"></i>Instagram</a
                   >
                 </li>
@@ -583,14 +608,8 @@
                   <a
                     href="https://www.tiktok.com/@abdulrahim_Alnajjar"
                     target="_blank"
+                    title="Tictok"
                     ><i class="fa-brands fa-tiktok"></i>Tictok</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/abdulrahim-alnajjar"
-                    target="_blank"
-                    ><i class="fa-brands fa-github"></i>Github</a
                   >
                 </li>
               </ul>

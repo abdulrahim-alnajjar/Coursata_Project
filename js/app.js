@@ -21,7 +21,6 @@ window.onload = function () {
 
 let searchIcon = document.querySelector(".web-header .search-icon");
 let searchSubmit = document.querySelector(".search-bar .search-form .submit");
-let searchClose = document.querySelector(".search-bar .close-search-bar");
 let searchInput = document.querySelector(
   ".search-bar .search-form .search-input"
 );
@@ -47,12 +46,7 @@ document.onclick = (e) => {
     }
   } else if (e.target == searchSubmit) {
     searchSubmit.parentElement.submit();
-  } else if (e.target == searchClose) {
-    searchBar.classList.toggle("open-search-bar");
-    document
-      .querySelector(".web-header .search-icon")
-      .classList.toggle("active");
-  } else if (
+  }else if (
     e.target == document.querySelector(".search-bar .search-form") ||
     e.target == searchInput
   ) {
@@ -72,7 +66,7 @@ setInterval(() => {
   ).style.backgroundImage = `url("./images/0 (${rand}).jpg")`;
   rand = Math.floor(Math.random() * 4 + 1);
   landingImage.src = `./images/intro cards (${rand}).jpg`;
-  landingImage.parentElement.dataset.info = `New Course ${rand}`;
+  landingImage.nextElementSibling.innerHTML = `New Course ${rand}`;
 }, 5000);
 
 // queue of iamge
