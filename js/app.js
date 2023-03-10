@@ -13,7 +13,7 @@ window.onload = function () {
   joinButton();
   //mood of site
   if (!localStorage.getItem("siteMood")) {
-    localStorage.siteMood = JSON.stringify({ one: "#e6e6e6", two: "#000" });
+    localStorage.siteMood = JSON.stringify({ one: "#fff", two: "#000" });
   }
   mood = JSON.parse(localStorage.siteMood);
   moodFunction();
