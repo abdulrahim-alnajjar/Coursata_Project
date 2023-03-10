@@ -3,17 +3,15 @@ let sideBar = document.querySelector(".side-bar");
 let searchBar = document.querySelector(".search-bar");
 let barIcon = document.querySelector(".bars-icon");
 let siteMood = document.querySelector(".side-bar .setting .mood-button");
-let mood = {};
+let mood = { one: "#fefefe", two: "#080808" };
 
 // load function
 window.onload = function () {
-  // resize the window
-
   // join buttons
   joinButton();
   //mood of site
   if (!localStorage.getItem("siteMood")) {
-    localStorage.siteMood = JSON.stringify({ one: "#fff", two: "#000" });
+    localStorage.siteMood = JSON.stringify(mood);
   }
   mood = JSON.parse(localStorage.siteMood);
   moodFunction();
@@ -46,7 +44,7 @@ document.onclick = (e) => {
     }
   } else if (e.target == searchSubmit) {
     searchSubmit.parentElement.submit();
-  }else if (
+  } else if (
     e.target == document.querySelector(".search-bar .search-form") ||
     e.target == searchInput
   ) {
@@ -131,7 +129,7 @@ observer.observe(document.querySelector(".skills .container"));
 
 // Copy rights
 let copyRight = document.querySelector("footer .copy-right");
-copyRight.innerHTML = `&copy; ${new Date().getFullYear()}, Abdulrahim Alnjjar`;
+copyRight.innerHTML = `&copy; ${new Date().getFullYear()}, Abdulrahim Alnajjar`;
 
 // hide join buttons
 let joinButtons = document.querySelector(".web-header .join-buttons");
