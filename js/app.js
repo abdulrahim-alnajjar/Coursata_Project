@@ -17,64 +17,63 @@ window.onload = function () {
   }
   mood = JSON.parse(localStorage.siteMood);
   moodFunction();
-  // pen side bar
-  if (!localStorage.getItem("sideBar")) {
-    localStorage.sideBar = "false";
+};
+
+let searchIcon = document.querySelector(".web-header .search-icon");
+let searchSubmit = document.querySelector(".search-bar .search-form .submit");
+let searchClose = document.querySelector(".search-bar .close-search-bar");
+let searchInput = document.querySelector(
+  ".search-bar .search-form .search-input"
+);
+document.onclick = (e) => {
+  // open and close the side bar
+  if (e.target == barIcon) {
+    barIcon.classList.toggle("active");
+    sideBar.classList.toggle("open-side-bar");
+  } else if (
+    !e.target.classList.contains("side-bar") &&
+    sideBar.classList.contains("open-side-bar")
+  ) {
+    barIcon.classList.toggle("active");
+    sideBar.classList.toggle("open-side-bar");
   }
-  if (localStorage.sideBar === "true") {
-    openSideBar();
+
+  // searching
+  if (e.target == searchIcon) {
+    searchIcon.classList.toggle("active");
+    searchBar.classList.toggle("open-search-bar");
+    if (searchBar.classList.contains("open-search-bar")) {
+      searchInput.focus();
+    }
+  } else if (e.target == searchSubmit) {
+    searchSubmit.parentElement.submit();
+  } else if (e.target == searchClose) {
+    searchBar.classList.toggle("open-search-bar");
+    document
+      .querySelector(".web-header .search-icon")
+      .classList.toggle("active");
+  } else if (
+    e.target == document.querySelector(".search-bar .search-form") ||
+    e.target == searchInput
+  ) {
+    searchInput.focus();
+  } else {
+    searchIcon.classList.remove("active");
+    searchBar.classList.remove("open-search-bar");
   }
 };
 
-// open and close the side bar
-barIcon.addEventListener("click", () => {
-  openSideBar();
-  if (sideBar.classList.contains("open-side-bar")) {
-    localStorage.sideBar = "true";
-  } else {
-    localStorage.sideBar = "false";
-  }
-});
-function openSideBar() {
-  barIcon.classList.toggle("active");
-  sideBar.classList.toggle("open-side-bar");
-}
-
 //change landing back ground
+let landingImage = document.querySelector(".images img");
 setInterval(() => {
   let rand = Math.floor(Math.random() * 5 + 1);
   document.querySelector(
     ".landing"
   ).style.backgroundImage = `url("./images/0 (${rand}).jpg")`;
-  rand = Math.floor(Math.random() * 3 + 1);
-  document.querySelector(
-    ".images img"
-  ).src = `./images/intro cards (${rand}).jpg`;
-}, 10000);
-
-// searching
-document
-  .querySelector(".web-header .search-icon")
-  .addEventListener("click", (e) => {
-    e.target.classList.toggle("active");
-    searchBar.classList.toggle("open-search-bar");
-    if (searchBar.classList.contains("open-search-bar")) {
-      document.querySelector(".search-bar .search-form .search-input").focus();
-    }
-  });
-document
-  .querySelector(".search-bar .search-form .submit")
-  .addEventListener("click", (e) => {
-    e.target.parentElement.submit();
-  });
-document
-  .querySelector(".search-bar .search-form .close-search-bar")
-  .addEventListener("click", () => {
-    searchBar.classList.toggle("open-search-bar");
-    document
-      .querySelector(".web-header .search-icon")
-      .classList.toggle("active");
-  });
+  rand = Math.floor(Math.random() * 4 + 1);
+  landingImage.src = `./images/intro cards (${rand}).jpg`;
+  landingImage.parentElement.dataset.info = `New Course ${rand}`;
+}, 5000);
 
 // queue of iamge
 let count = 0;
@@ -145,10 +144,28 @@ let joinButtons = document.querySelector(".web-header .join-buttons");
 window.onresize = joinButton;
 function joinButton() {
   if (window.innerWidth <= 992) {
-    document
-      .querySelector(".all-site-content .side-bar .setting")
-      .before(joinButtons);
+    document.querySelector(".side-bar .setting").before(joinButtons);
   } else {
     document.querySelector(".web-header .container").appendChild(joinButtons);
   }
 }
+
+// form data
+let formName = document.querySelector(".send-message .s-m-form .name");
+formName.oninput = () => {
+  /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g.test(formName.value)
+    ? (formName.style.cssText = "border: 2px solid green;")
+    : (formName.style.cssText = "border: 2px solid red");
+};
+let formEmail = document.querySelector(".send-message .s-m-form .email");
+formEmail.oninput = () => {
+  /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/g.test(formEmail.value)
+    ? (formEmail.style.cssText = "border: 2px solid green;")
+    : (formEmail.style.cssText = "border: 2px solid red");
+};
+let formPhone = document.querySelector(".send-message .s-m-form .phone");
+formPhone.oninput = () => {
+  /^[0-9]+$/g.test(formPhone.value)
+    ? (formPhone.style.cssText = "border: 2px solid green;")
+    : (formPhone.style.cssText = "border: 2px solid red");
+};

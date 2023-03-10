@@ -26,47 +26,50 @@
       </div>
     </header>
     <!-- end header -->
+
     <!-- start background layout -->
     <div class="back-layout"></div>
     <!-- end background layout -->
-    <!-- start all site content -->
-    <div class="all-site-content">
-      <!-- start side bar -->
-      <div class="side-bar">
-        <nav class="nav-list">
-          <ul>
-            <li><a href="#home">home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="setting">
-          <p class="mood-button">
-            <i class="fa-solid fa-circle-half-stroke"></i> Mood
-          </p>
+
+    <!-- start search bar -->
+    <div class="search-bar">
+      <form action="" class="search-form">
+        <i class="fa-solid fa-magnifying-glass submit"></i>
+        <input
+          type="search"
+          name="search"
+          id="nav-search"
+          class="search-input"
+          placeholder="Search"
+        />
+        <i class="fa-solid fa-xmark close-search-bar"></i>
+      </form>
+    </div>
+    <!-- end search bar -->
+
+    <!-- start side bar -->
+    <div class="side-bar">
+      <nav class="nav-list">
+        <ul>
+          <li><a href="#home">home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#time-line">Time line</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="setting">
+        <div class="mood-button">
+          <i class="fa-solid fa-circle-half-stroke"></i> Mood
         </div>
       </div>
-      <!-- end side bar -->
-      <!-- start body content  -->
+    </div>
+    <!-- end side bar -->
+
+    <!-- start all site content -->
+    <div class="all-site-content">
       <div class="content">
-        <!-- end body content  -->
-        <!-- start search bar -->
-        <div class="search-bar">
-          <form action="" class="search-form">
-            <i class="fa-solid fa-magnifying-glass submit"></i>
-            <input
-              type="search"
-              name="search"
-              id="nav-search"
-              class="search-input"
-              placeholder="Search"
-            />
-            <i class="fa-solid fa-xmark close-search-bar"></i>
-          </form>
-        </div>
-        <!-- end search bar -->
         <!-- start landing -->
         <section class="landing" id="home">
           <div class="overlay"></div>
@@ -81,22 +84,15 @@
             </div>
             <div class="intro-box">
               <div class="images">
-                <div class="img-box">
-                  <img src="./images/intro cards (1).jpg" alt="image product" />
-                </div>
-                <div class="info">
-                  <h3>new courses</h3>
-                  <p>
-                    <span>course name:</span> Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit. Architecto, necessitatibus
-                    totam illum amet ea minus accusamus consequatur.
-                  </p>
+                <div class="image-box" data-info="New Course">
+                  <img src="./images/intro cards (1).jpg" alt="image product"  />
                 </div>
               </div>
             </div>
           </div>
         </section>
         <!-- end landing -->
+
         <!-- strart photos queue -->
         <section class="image-queue">
           <div class="container">
@@ -110,21 +106,21 @@
               </p>
             </div>
             <div class="content">
-              <div class="card img-box active">
-                <div class="img img-box">
+              <div class="card active">
+                <div class="img">
                   <img src="./images/imgs queue (1).jpg" alt="" />
                 </div>
                 <h3>course name</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
               </div>
-              <div class="img-box card">
+              <div class="card">
                 <div class="img">
                   <img src="./images/imgs queue (2).jpg" alt="" />
                 </div>
                 <h3>course name</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
               </div>
-              <div class="img-box card">
+              <div class="card">
                 <div class="img">
                   <img src="./images/imgs queue (3).jpg" alt="" />
                 </div>
@@ -135,6 +131,7 @@
           </div>
         </section>
         <!-- end photos queue -->
+
         <!-- strart Services -->
         <section class="services content-section" id="services">
           <div class="container">
@@ -192,6 +189,7 @@
           </div>
         </section>
         <!-- end Services -->
+
         <!-- start First section -->
         <section class="section">
           <div class="container">
@@ -217,6 +215,7 @@
           </div>
         </section>
         <!-- end First section -->
+
         <!-- strart Projects -->
         <section class="projects" id="projects">
           <div class="container">
@@ -294,6 +293,7 @@
           </div>
         </section>
         <!-- end projects -->
+
         <!-- start libraries -->
         <section class="libraries section">
           <div class="container">
@@ -316,6 +316,7 @@
           </div>
         </section>
         <!-- end libraries -->
+
         <!-- start skills -->
         <section class="skills" id="skills">
           <div class="container">
@@ -349,6 +350,49 @@
           </div>
         </section>
         <!-- end skills -->
+
+        <!-- start time line -->
+        <div class="time-line" id="time-line">
+          <div class="container">
+            <div class="intro-text">
+              <h2>time line</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Nostrum et deleniti obcaecati, repellendus soluta atque nobis
+                dolores natus adipisci quae reprehenderit ut corporis rem.
+                Expedita sequi officiis impedit nam magnam!
+              </p>
+            </div>
+            <div class="time-grid">
+              <div class="stage" data-year="2020">
+                <h3>start company</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                  atque odit nulla provident, deleniti sapiente corporis omnis.
+                  Explicabo non fugit exercitationem.
+                </p>
+              </div>
+              <div class="stage" data-year="2021">
+                <h3>big expansion</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                  atque odit nulla provident, deleniti sapiente corporis omnis.
+                  Explicabo non fugit exercitationem.
+                </p>
+              </div>
+              <div class="stage" data-year="2022">
+                <h3>we still exist</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                  atque odit nulla provident, deleniti sapiente corporis omnis.
+                  Explicabo non fugit exercitationem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end time line -->
+
         <!-- strart blog -->
         <section class="blog projects">
           <div class="container">
@@ -420,6 +464,7 @@
           </div>
         </section>
         <!-- end blog -->
+
         <!-- start What They Say about us -->
         <section class="quotes section">
           <div class="container">
@@ -458,6 +503,7 @@
           </div>
         </section>
         <!-- end What They Say about us -->
+
         <!-- start form -->
         <section class="send-message" id="contact">
           <div class="container">
@@ -474,14 +520,14 @@
               <form action="" class="s-m-form">
                 <div class="input-grid">
                   <input
-                    class="text-input"
+                    class="text-input name"
                     type="text"
                     placeholder="Full Name"
                   />
-                  <input class="text-input" type="email" placeholder="Email" />
-                  <input class="text-input" type="text" placeholder="Subject" />
+                  <input class="text-input email" type="email" placeholder="Email" />
+                  <input class="text-input subject" type="text" placeholder="Subject" />
                   <input
-                    class="text-input"
+                    class="text-input phone"
                     type="text"
                     placeholder="Phone Number"
                   />
@@ -510,6 +556,7 @@
           </div>
         </section>
         <!-- end form -->
+
         <!-- start footer -->
         <footer>
           <div class="container">
